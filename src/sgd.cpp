@@ -1,4 +1,4 @@
-#include "../include/sgd.h"
+#include "sgd.h"
 using namespace std;
 
 int main()
