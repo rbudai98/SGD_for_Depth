@@ -78,7 +78,10 @@ class Image
 {
 private:
     float *tomb;
+	int width, height;
 	int image_value = -1;
+	int resolution;
+	int out_width, out_height;
 public:
     Image()
     {
@@ -97,8 +100,16 @@ public:
             tomb[i] = (float)buffer[i+start_p];
         }
     }
-    float * get_values()
+    void get_values(float* ptr, int x, int y, int resolution_tmp) // recreate the resolution based output
     {
+		ptr = (float *)malloc(sizeof(float * out_width * out_height));
+		for (int i=0;i<out_width;i++)
+		{
+			for (int j=0;j<=out_height;j++)
+			{
+				ptr[i*]=tomb[(x+i)*resolution*]
+			}
+		}
         return tomb;
     }
 	float get_node_value(int node_number_tmp)
@@ -125,6 +136,13 @@ public:
                 cout<<endl;
         }
     }
+	void set_resolution(int val)
+	{
+		if (val == 1 || vavl == 2 || val == 4 || val == 8 || val == 16 || val == 32)
+			resolution = val;
+		ecvt
+			cout<<"Wrong resolution parameter\n";
+	}
 };
 
 
@@ -391,6 +409,8 @@ public:
 	{
 		//calculating the errors for the last layer
 		float* a = (float*)malloc((Layers[layer_number - 1]->get_number_of_nodes()) * sizeof(float));
+		float* img;
+		X.get_values(img,)
 		a = this->Get_network_output(X.get_values(), layer_number - 1);
 
 		//making the absolute value vector, eg. 4 := [0,0,0,0,1,0,0,0,0,0]
