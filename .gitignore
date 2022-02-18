@@ -31,4 +31,10 @@
 *.out
 *.app
 
-resources
+
+*.json
+*.raw
+*.jpg
+*.jpeg
+depth_to_rgb
+
