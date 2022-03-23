@@ -28,7 +28,7 @@ nrOfCroppedFileNotOk = 0
 outputArray = np.array([])
 
 
-nr_of_dataset = 2
+nr_of_dataset = 4
 dataset_path = "dataSet" + (str)(nr_of_dataset) + "/"
 ir_path = "ir/ir_"
 depth_path = "depth/depth_"
