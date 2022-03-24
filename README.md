@@ -1,5 +1,5 @@
 # Tensorflow for depth frames
-Depth frame processing with reduced network dimensions, and dataset preparation for dataSet
+Depth frame processing with reduced network dimensions, and dataset preparation for tensorlfow training
 
 
 ### ```resources``` directory:
