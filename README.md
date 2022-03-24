@@ -1,2 +1,2 @@
-# SGD_for_Depth
-Stochastic gradient descent optimization for depth object detection
+# Tensorflow for depth frames
+Depth frame processing with reduced network dimensions, and dataset preparation for dataSet
