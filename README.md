@@ -7,7 +7,7 @@ As structure contains multiple ```dataSet<nr>``` directories that include:
   * ```depth```            saved depth frames for training
   * ```ir```               saved ir frames for labeling
   * ```jsons```            generated label jsons 
-  *```load_jsons.py```           dataset generator from the previopus directories 
+  * ```load_jsons.py```           dataset generator from the previopus directories 
   * ```.npy```                   generated arrays from the dataset that is going to be used for trtaining
   
   ### ```tensorflow``` directory:
