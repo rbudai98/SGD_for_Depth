@@ -1,0 +1,428 @@
+Model: "fully_connected"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         [(None, 300)]             0         
+_________________________________________________________________
+dense (Dense)                (None, 300)               90300     
+_________________________________________________________________
+dense_1 (Dense)              (None, 300)               90300     
+_________________________________________________________________
+dense_2 (Dense)              (None, 1)                 301       
+=================================================================
+Total params: 180,901
+Trainable params: 180,901
+Non-trainable params: 0
+_________________________________________________________________
+
+###
+
+ DataSet:  2 
+
+
+Size:  317400 , max value=  200.0 
+
+
+################
+Nr of images:  1058
+Epoch 1/100
+170/170 - 7s - loss: 0.7006 - accuracy: 0.5012 - val_loss: 0.6896 - val_accuracy: 0.5047
+
+Epoch 00001: saving model to model_checkpoint.ckpt
+Epoch 2/100
+170/170 - 2s - loss: 0.6974 - accuracy: 0.4882 - val_loss: 0.6961 - val_accuracy: 0.4906
+
+Epoch 00002: saving model to model_checkpoint.ckpt
+Epoch 3/100
+170/170 - 2s - loss: 0.6947 - accuracy: 0.5213 - val_loss: 0.6885 - val_accuracy: 0.5189
+
+Epoch 00003: saving model to model_checkpoint.ckpt
+Epoch 4/100
+170/170 - 3s - loss: 0.6955 - accuracy: 0.5118 - val_loss: 0.6877 - val_accuracy: 0.5566
+
+Epoch 00004: saving model to model_checkpoint.ckpt
+Epoch 5/100
+170/170 - 2s - loss: 0.6948 - accuracy: 0.5142 - val_loss: 0.6886 - val_accuracy: 0.5094
+
+Epoch 00005: saving model to model_checkpoint.ckpt
+Epoch 6/100
+170/170 - 2s - loss: 0.6935 - accuracy: 0.5118 - val_loss: 0.6872 - val_accuracy: 0.5755
+
+Epoch 00006: saving model to model_checkpoint.ckpt
+Epoch 7/100
+170/170 - 2s - loss: 0.7007 - accuracy: 0.5225 - val_loss: 0.6903 - val_accuracy: 0.5142
+
+Epoch 00007: saving model to model_checkpoint.ckpt
+Epoch 8/100
+170/170 - 2s - loss: 0.6935 - accuracy: 0.5189 - val_loss: 0.6931 - val_accuracy: 0.4811
+
+Epoch 00008: saving model to model_checkpoint.ckpt
+Epoch 9/100
+170/170 - 2s - loss: 0.6966 - accuracy: 0.5236 - val_loss: 0.6868 - val_accuracy: 0.5755
+
+Epoch 00009: saving model to model_checkpoint.ckpt
+Epoch 10/100
+170/170 - 2s - loss: 0.6923 - accuracy: 0.5414 - val_loss: 0.6951 - val_accuracy: 0.4906
+
+Epoch 00010: saving model to model_checkpoint.ckpt
+Epoch 11/100
+170/170 - 2s - loss: 0.6950 - accuracy: 0.5165 - val_loss: 0.6874 - val_accuracy: 0.5330
+
+Epoch 00011: saving model to model_checkpoint.ckpt
+Epoch 12/100
+170/170 - 2s - loss: 0.6972 - accuracy: 0.4905 - val_loss: 0.6893 - val_accuracy: 0.5283
+
+Epoch 00012: saving model to model_checkpoint.ckpt
+Epoch 13/100
+170/170 - 2s - loss: 0.6966 - accuracy: 0.5035 - val_loss: 0.6872 - val_accuracy: 0.5802
+
+Epoch 00013: saving model to model_checkpoint.ckpt
+Epoch 14/100
+170/170 - 2s - loss: 0.6945 - accuracy: 0.5165 - val_loss: 0.6883 - val_accuracy: 0.5472
+
+Epoch 00014: saving model to model_checkpoint.ckpt
+Epoch 15/100
+170/170 - 2s - loss: 0.6944 - accuracy: 0.5130 - val_loss: 0.6875 - val_accuracy: 0.5755
+
+Epoch 00015: saving model to model_checkpoint.ckpt
+Epoch 16/100
+170/170 - 2s - loss: 0.6936 - accuracy: 0.5165 - val_loss: 0.6905 - val_accuracy: 0.5236
+
+Epoch 00016: saving model to model_checkpoint.ckpt
+Epoch 17/100
+170/170 - 2s - loss: 0.6948 - accuracy: 0.5106 - val_loss: 0.7146 - val_accuracy: 0.4906
+
+Epoch 00017: saving model to model_checkpoint.ckpt
+Epoch 18/100
+170/170 - 2s - loss: 0.6927 - accuracy: 0.5319 - val_loss: 0.6883 - val_accuracy: 0.5236
+
+Epoch 00018: saving model to model_checkpoint.ckpt
+Epoch 19/100
+170/170 - 2s - loss: 0.6948 - accuracy: 0.4882 - val_loss: 0.6934 - val_accuracy: 0.5094
+
+Epoch 00019: saving model to model_checkpoint.ckpt
+Epoch 20/100
+170/170 - 2s - loss: 0.6958 - accuracy: 0.5189 - val_loss: 0.6887 - val_accuracy: 0.5425
+
+Epoch 00020: saving model to model_checkpoint.ckpt
+Epoch 21/100
+170/170 - 2s - loss: 0.6949 - accuracy: 0.5118 - val_loss: 0.6884 - val_accuracy: 0.5236
+
+Epoch 00021: saving model to model_checkpoint.ckpt
+Epoch 22/100
+170/170 - 2s - loss: 0.6938 - accuracy: 0.5296 - val_loss: 0.7018 - val_accuracy: 0.4906
+
+Epoch 00022: saving model to model_checkpoint.ckpt
+Epoch 23/100
+170/170 - 2s - loss: 0.6927 - accuracy: 0.5272 - val_loss: 0.6908 - val_accuracy: 0.5142
+
+Epoch 00023: saving model to model_checkpoint.ckpt
+Epoch 24/100
+170/170 - 2s - loss: 0.6933 - accuracy: 0.5177 - val_loss: 0.6882 - val_accuracy: 0.5283
+
+Epoch 00024: saving model to model_checkpoint.ckpt
+Epoch 25/100
+170/170 - 2s - loss: 0.6923 - accuracy: 0.5177 - val_loss: 0.6885 - val_accuracy: 0.5425
+
+Epoch 00025: saving model to model_checkpoint.ckpt
+Epoch 26/100
+170/170 - 2s - loss: 0.6927 - accuracy: 0.5236 - val_loss: 0.6876 - val_accuracy: 0.5802
+
+Epoch 00026: saving model to model_checkpoint.ckpt
+Epoch 27/100
+170/170 - 2s - loss: 0.6938 - accuracy: 0.5366 - val_loss: 0.6914 - val_accuracy: 0.5094
+
+Epoch 00027: saving model to model_checkpoint.ckpt
+Epoch 28/100
+170/170 - 2s - loss: 0.6942 - accuracy: 0.4965 - val_loss: 0.6880 - val_accuracy: 0.5802
+
+Epoch 00028: saving model to model_checkpoint.ckpt
+Epoch 29/100
+170/170 - 2s - loss: 0.6895 - accuracy: 0.5414 - val_loss: 0.6906 - val_accuracy: 0.5236
+
+Epoch 00029: saving model to model_checkpoint.ckpt
+Epoch 30/100
+170/170 - 2s - loss: 0.6911 - accuracy: 0.5272 - val_loss: 0.6882 - val_accuracy: 0.5330
+
+Epoch 00030: saving model to model_checkpoint.ckpt
+Epoch 31/100
+170/170 - 2s - loss: 0.6932 - accuracy: 0.5402 - val_loss: 0.6965 - val_accuracy: 0.5142
+
+Epoch 00031: saving model to model_checkpoint.ckpt
+Epoch 32/100
+170/170 - 2s - loss: 0.6933 - accuracy: 0.5095 - val_loss: 0.6881 - val_accuracy: 0.5330
+
+Epoch 00032: saving model to model_checkpoint.ckpt
+Epoch 33/100
+170/170 - 2s - loss: 0.6884 - accuracy: 0.5508 - val_loss: 0.7115 - val_accuracy: 0.4906
+
+Epoch 00033: saving model to model_checkpoint.ckpt
+Epoch 34/100
+170/170 - 2s - loss: 0.6970 - accuracy: 0.5236 - val_loss: 0.6877 - val_accuracy: 0.5660
+
+Epoch 00034: saving model to model_checkpoint.ckpt
+Epoch 35/100
+170/170 - 2s - loss: 0.6922 - accuracy: 0.5165 - val_loss: 0.6880 - val_accuracy: 0.5755
+
+Epoch 00035: saving model to model_checkpoint.ckpt
+Epoch 36/100
+170/170 - 2s - loss: 0.6929 - accuracy: 0.5284 - val_loss: 0.6879 - val_accuracy: 0.5566
+
+Epoch 00036: saving model to model_checkpoint.ckpt
+Epoch 37/100
+170/170 - 2s - loss: 0.6934 - accuracy: 0.5106 - val_loss: 0.6884 - val_accuracy: 0.5377
+
+Epoch 00037: saving model to model_checkpoint.ckpt
+Epoch 38/100
+170/170 - 2s - loss: 0.6923 - accuracy: 0.5213 - val_loss: 0.6879 - val_accuracy: 0.5660
+
+Epoch 00038: saving model to model_checkpoint.ckpt
+Epoch 39/100
+170/170 - 2s - loss: 0.6919 - accuracy: 0.5118 - val_loss: 0.6890 - val_accuracy: 0.5330
+
+Epoch 00039: saving model to model_checkpoint.ckpt
+Epoch 40/100
+170/170 - 2s - loss: 0.6910 - accuracy: 0.5296 - val_loss: 0.6883 - val_accuracy: 0.5377
+
+Epoch 00040: saving model to model_checkpoint.ckpt
+Epoch 41/100
+170/170 - 2s - loss: 0.6907 - accuracy: 0.5426 - val_loss: 0.6952 - val_accuracy: 0.5094
+
+Epoch 00041: saving model to model_checkpoint.ckpt
+Epoch 42/100
+170/170 - 2s - loss: 0.6935 - accuracy: 0.5248 - val_loss: 0.6882 - val_accuracy: 0.5566
+
+Epoch 00042: saving model to model_checkpoint.ckpt
+Epoch 43/100
+170/170 - 2s - loss: 0.6920 - accuracy: 0.5213 - val_loss: 0.6889 - val_accuracy: 0.5425
+
+Epoch 00043: saving model to model_checkpoint.ckpt
+Epoch 44/100
+170/170 - 2s - loss: 0.6904 - accuracy: 0.5154 - val_loss: 0.6915 - val_accuracy: 0.5189
+
+Epoch 00044: saving model to model_checkpoint.ckpt
+Epoch 45/100
+170/170 - 2s - loss: 0.6915 - accuracy: 0.5437 - val_loss: 0.6905 - val_accuracy: 0.5142
+
+Epoch 00045: saving model to model_checkpoint.ckpt
+Epoch 46/100
+170/170 - 2s - loss: 0.6903 - accuracy: 0.5426 - val_loss: 0.6903 - val_accuracy: 0.5425
+
+Epoch 00046: saving model to model_checkpoint.ckpt
+Epoch 47/100
+170/170 - 2s - loss: 0.6908 - accuracy: 0.5213 - val_loss: 0.6881 - val_accuracy: 0.5519
+
+Epoch 00047: saving model to model_checkpoint.ckpt
+Epoch 48/100
+170/170 - 2s - loss: 0.6921 - accuracy: 0.5366 - val_loss: 0.6889 - val_accuracy: 0.5236
+
+Epoch 00048: saving model to model_checkpoint.ckpt
+Epoch 49/100
+170/170 - 2s - loss: 0.6909 - accuracy: 0.5461 - val_loss: 0.6888 - val_accuracy: 0.5330
+
+Epoch 00049: saving model to model_checkpoint.ckpt
+Epoch 50/100
+170/170 - 2s - loss: 0.6916 - accuracy: 0.5213 - val_loss: 0.6879 - val_accuracy: 0.5755
+
+Epoch 00050: saving model to model_checkpoint.ckpt
+Epoch 51/100
+170/170 - 2s - loss: 0.6918 - accuracy: 0.5225 - val_loss: 0.6888 - val_accuracy: 0.5425
+
+Epoch 00051: saving model to model_checkpoint.ckpt
+Epoch 52/100
+170/170 - 2s - loss: 0.6859 - accuracy: 0.5402 - val_loss: 0.7038 - val_accuracy: 0.5047
+
+Epoch 00052: saving model to model_checkpoint.ckpt
+Epoch 53/100
+170/170 - 2s - loss: 0.6957 - accuracy: 0.4976 - val_loss: 0.6890 - val_accuracy: 0.5519
+
+Epoch 00053: saving model to model_checkpoint.ckpt
+Epoch 54/100
+170/170 - 2s - loss: 0.6902 - accuracy: 0.5284 - val_loss: 0.6883 - val_accuracy: 0.5519
+
+Epoch 00054: saving model to model_checkpoint.ckpt
+Epoch 55/100
+170/170 - 2s - loss: 0.6904 - accuracy: 0.5260 - val_loss: 0.6900 - val_accuracy: 0.5425
+
+Epoch 00055: saving model to model_checkpoint.ckpt
+Epoch 56/100
+170/170 - 2s - loss: 0.6925 - accuracy: 0.5213 - val_loss: 0.6890 - val_accuracy: 0.5189
+
+Epoch 00056: saving model to model_checkpoint.ckpt
+Epoch 57/100
+170/170 - 2s - loss: 0.6899 - accuracy: 0.5319 - val_loss: 0.6895 - val_accuracy: 0.5330
+
+Epoch 00057: saving model to model_checkpoint.ckpt
+Epoch 58/100
+170/170 - 2s - loss: 0.6910 - accuracy: 0.5118 - val_loss: 0.6897 - val_accuracy: 0.5377
+
+Epoch 00058: saving model to model_checkpoint.ckpt
+Epoch 59/100
+170/170 - 2s - loss: 0.6904 - accuracy: 0.5296 - val_loss: 0.6924 - val_accuracy: 0.5142
+
+Epoch 00059: saving model to model_checkpoint.ckpt
+Epoch 60/100
+170/170 - 2s - loss: 0.6929 - accuracy: 0.5272 - val_loss: 0.6886 - val_accuracy: 0.5519
+
+Epoch 00060: saving model to model_checkpoint.ckpt
+Epoch 61/100
+170/170 - 2s - loss: 0.6880 - accuracy: 0.5426 - val_loss: 0.7023 - val_accuracy: 0.5047
+
+Epoch 00061: saving model to model_checkpoint.ckpt
+Epoch 62/100
+170/170 - 2s - loss: 0.6928 - accuracy: 0.5390 - val_loss: 0.6925 - val_accuracy: 0.5142
+
+Epoch 00062: saving model to model_checkpoint.ckpt
+Epoch 63/100
+170/170 - 2s - loss: 0.6901 - accuracy: 0.5296 - val_loss: 0.6880 - val_accuracy: 0.5613
+
+Epoch 00063: saving model to model_checkpoint.ckpt
+Epoch 64/100
+170/170 - 2s - loss: 0.6901 - accuracy: 0.5307 - val_loss: 0.6886 - val_accuracy: 0.5613
+
+Epoch 00064: saving model to model_checkpoint.ckpt
+Epoch 65/100
+170/170 - 2s - loss: 0.6891 - accuracy: 0.5378 - val_loss: 0.6915 - val_accuracy: 0.5283
+
+Epoch 00065: saving model to model_checkpoint.ckpt
+Epoch 66/100
+170/170 - 2s - loss: 0.6899 - accuracy: 0.5248 - val_loss: 0.6938 - val_accuracy: 0.5094
+
+Epoch 00066: saving model to model_checkpoint.ckpt
+Epoch 67/100
+170/170 - 2s - loss: 0.6891 - accuracy: 0.5260 - val_loss: 0.6883 - val_accuracy: 0.5566
+
+Epoch 00067: saving model to model_checkpoint.ckpt
+Epoch 68/100
+170/170 - 2s - loss: 0.6898 - accuracy: 0.5260 - val_loss: 0.6903 - val_accuracy: 0.5377
+
+Epoch 00068: saving model to model_checkpoint.ckpt
+Epoch 69/100
+170/170 - 2s - loss: 0.6898 - accuracy: 0.5165 - val_loss: 0.6952 - val_accuracy: 0.4953
+
+Epoch 00069: saving model to model_checkpoint.ckpt
+Epoch 70/100
+170/170 - 2s - loss: 0.6880 - accuracy: 0.5319 - val_loss: 0.6897 - val_accuracy: 0.5236
+
+Epoch 00070: saving model to model_checkpoint.ckpt
+Epoch 71/100
+170/170 - 2s - loss: 0.6894 - accuracy: 0.5118 - val_loss: 0.6901 - val_accuracy: 0.5283
+
+Epoch 00071: saving model to model_checkpoint.ckpt
+Epoch 72/100
+170/170 - 2s - loss: 0.6884 - accuracy: 0.5236 - val_loss: 0.6891 - val_accuracy: 0.5613
+
+Epoch 00072: saving model to model_checkpoint.ckpt
+Epoch 73/100
+170/170 - 2s - loss: 0.6910 - accuracy: 0.5154 - val_loss: 0.6893 - val_accuracy: 0.5566
+
+Epoch 00073: saving model to model_checkpoint.ckpt
+Epoch 74/100
+170/170 - 2s - loss: 0.6900 - accuracy: 0.5284 - val_loss: 0.6891 - val_accuracy: 0.5613
+
+Epoch 00074: saving model to model_checkpoint.ckpt
+Epoch 75/100
+170/170 - 2s - loss: 0.6896 - accuracy: 0.5165 - val_loss: 0.6928 - val_accuracy: 0.5283
+
+Epoch 00075: saving model to model_checkpoint.ckpt
+Epoch 76/100
+170/170 - 2s - loss: 0.6899 - accuracy: 0.5165 - val_loss: 0.6892 - val_accuracy: 0.5613
+
+Epoch 00076: saving model to model_checkpoint.ckpt
+Epoch 77/100
+170/170 - 2s - loss: 0.6878 - accuracy: 0.5461 - val_loss: 0.6898 - val_accuracy: 0.5472
+
+Epoch 00077: saving model to model_checkpoint.ckpt
+Epoch 78/100
+170/170 - 2s - loss: 0.6887 - accuracy: 0.5225 - val_loss: 0.6893 - val_accuracy: 0.5472
+
+Epoch 00078: saving model to model_checkpoint.ckpt
+Epoch 79/100
+170/170 - 2s - loss: 0.6886 - accuracy: 0.5556 - val_loss: 0.6948 - val_accuracy: 0.5189
+
+Epoch 00079: saving model to model_checkpoint.ckpt
+Epoch 80/100
+170/170 - 2s - loss: 0.6905 - accuracy: 0.5343 - val_loss: 0.6891 - val_accuracy: 0.5755
+
+Epoch 00080: saving model to model_checkpoint.ckpt
+Epoch 81/100
+170/170 - 2s - loss: 0.6913 - accuracy: 0.5095 - val_loss: 0.6891 - val_accuracy: 0.5566
+
+Epoch 00081: saving model to model_checkpoint.ckpt
+Epoch 82/100
+170/170 - 2s - loss: 0.6872 - accuracy: 0.5414 - val_loss: 0.6890 - val_accuracy: 0.5755
+
+Epoch 00082: saving model to model_checkpoint.ckpt
+Epoch 83/100
+170/170 - 2s - loss: 0.6868 - accuracy: 0.5402 - val_loss: 0.6941 - val_accuracy: 0.5189
+
+Epoch 00083: saving model to model_checkpoint.ckpt
+Epoch 84/100
+170/170 - 2s - loss: 0.6919 - accuracy: 0.5296 - val_loss: 0.6904 - val_accuracy: 0.5330
+
+Epoch 00084: saving model to model_checkpoint.ckpt
+Epoch 85/100
+170/170 - 2s - loss: 0.6883 - accuracy: 0.5343 - val_loss: 0.6900 - val_accuracy: 0.5236
+
+Epoch 00085: saving model to model_checkpoint.ckpt
+Epoch 86/100
+170/170 - 2s - loss: 0.6891 - accuracy: 0.5331 - val_loss: 0.6901 - val_accuracy: 0.5377
+
+Epoch 00086: saving model to model_checkpoint.ckpt
+Epoch 87/100
+170/170 - 2s - loss: 0.6878 - accuracy: 0.5106 - val_loss: 0.6915 - val_accuracy: 0.5377
+
+Epoch 00087: saving model to model_checkpoint.ckpt
+Epoch 88/100
+170/170 - 2s - loss: 0.6891 - accuracy: 0.5520 - val_loss: 0.6929 - val_accuracy: 0.5236
+
+Epoch 00088: saving model to model_checkpoint.ckpt
+Epoch 89/100
+170/170 - 2s - loss: 0.6882 - accuracy: 0.5319 - val_loss: 0.6899 - val_accuracy: 0.5660
+
+Epoch 00089: saving model to model_checkpoint.ckpt
+Epoch 90/100
+170/170 - 2s - loss: 0.6881 - accuracy: 0.5213 - val_loss: 0.6900 - val_accuracy: 0.5519
+
+Epoch 00090: saving model to model_checkpoint.ckpt
+Epoch 91/100
+170/170 - 2s - loss: 0.6905 - accuracy: 0.5355 - val_loss: 0.6896 - val_accuracy: 0.5566
+
+Epoch 00091: saving model to model_checkpoint.ckpt
+Epoch 92/100
+170/170 - 2s - loss: 0.6874 - accuracy: 0.5284 - val_loss: 0.6898 - val_accuracy: 0.5519
+
+Epoch 00092: saving model to model_checkpoint.ckpt
+Epoch 93/100
+170/170 - 2s - loss: 0.6875 - accuracy: 0.5496 - val_loss: 0.6935 - val_accuracy: 0.5283
+
+Epoch 00093: saving model to model_checkpoint.ckpt
+Epoch 94/100
+170/170 - 2s - loss: 0.6877 - accuracy: 0.5355 - val_loss: 0.6897 - val_accuracy: 0.5566
+
+Epoch 00094: saving model to model_checkpoint.ckpt
+Epoch 95/100
+170/170 - 2s - loss: 0.6872 - accuracy: 0.5437 - val_loss: 0.6941 - val_accuracy: 0.5189
+
+Epoch 00095: saving model to model_checkpoint.ckpt
+Epoch 96/100
+170/170 - 2s - loss: 0.6863 - accuracy: 0.5366 - val_loss: 0.6950 - val_accuracy: 0.5236
+
+Epoch 00096: saving model to model_checkpoint.ckpt
+Epoch 97/100
+170/170 - 2s - loss: 0.6892 - accuracy: 0.5319 - val_loss: 0.6900 - val_accuracy: 0.5566
+
+Epoch 00097: saving model to model_checkpoint.ckpt
+Epoch 98/100
+170/170 - 2s - loss: 0.6864 - accuracy: 0.5366 - val_loss: 0.6917 - val_accuracy: 0.5189
+
+Epoch 00098: saving model to model_checkpoint.ckpt
+Epoch 99/100
+170/170 - 2s - loss: 0.6872 - accuracy: 0.5355 - val_loss: 0.6958 - val_accuracy: 0.5142
+
+Epoch 00099: saving model to model_checkpoint.ckpt
+Epoch 100/100
+170/170 - 2s - loss: 0.6876 - accuracy: 0.5343 - val_loss: 0.6912 - val_accuracy: 0.5425
+
+Epoch 00100: saving model to model_checkpoint.ckpt
+ 1/34 [..............................] - ETA: 2s - loss: 0.6804 - accuracy: 0.5312 8/34 [======>.......................] - ETA: 0s - loss: 0.6910 - accuracy: 0.519516/34 [=============>................] - ETA: 0s - loss: 0.6835 - accuracy: 0.535225/34 [=====================>........] - ETA: 0s - loss: 0.6836 - accuracy: 0.547533/34 [============================>.] - ETA: 0s - loss: 0.6858 - accuracy: 0.544534/34 [==============================] - 0s 7ms/step - loss: 0.6857 - accuracy: 0.5444

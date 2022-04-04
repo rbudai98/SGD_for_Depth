@@ -1,6 +1,7 @@
 
 # imports
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -26,9 +27,10 @@ def load_data(mode='train'):
 
     print("Size: ",dataSetX.size)
     nr_of_imgs = (int)(dataSetX.size/300)
-    x = dataSetX.reshape(nr_of_imgs, 300)
-    y = dataSetY.reshape(nr_of_imgs)
-    return(x,y,x,y)
+    x = dataSetX.reshape(nr_of_imgs, 300).astype("float32")/np.max(dataSetX)
+    y = dataSetY.reshape(nr_of_imgs, 1)
+
+    return(x[0:(int)(nr_of_imgs*0.8)],y[0:(int)(nr_of_imgs*0.8)],x[(int)(nr_of_imgs*0.8):(int)(nr_of_imgs)],y[(int)(nr_of_imgs*0.8):(int)(nr_of_imgs)])
 
 
 
@@ -54,9 +56,9 @@ print("- Validation-set:\t{}".format(len(y_valid)))
 
 # Hyper-parameters
 epochs = 10             # Total number of training epochs
-batch_size = 100        # Training batch size
+batch_size = 10        # Training batch size
 display_freq = 100      # Frequency of displaying the training results
-learning_rate = 0.001   # The optimization initial learning rate
+learning_rate = 0.0001   # The optimization initial learning rate
 
 h1 = 200                # Number of units in the first hidden layer
  
@@ -112,7 +114,7 @@ x = tf.placeholder(tf.float32, shape=[None, img_size_flat], name='X')
 y = tf.placeholder(tf.float32, shape=[None, n_classes], name='Y')
  
 
-fc1 = fc_layer(x, h1, 'FC1', use_relu=True)
+fc1 = fc_layer(x, h1, 'FC1', use_relu=False)
 output_logits = fc_layer(fc1, n_classes, 'OUT', use_relu=False)
 
 

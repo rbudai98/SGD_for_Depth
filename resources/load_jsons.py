@@ -28,7 +28,7 @@ nrOfCroppedFileOk = 0
 nrOfCroppedFileNotOk = 0
 outputArray = np.array([])
 
-for i in range (2,5):
+for i in range (1,2):
     nr_of_dataset = i
     print("DataSet: ", nr_of_dataset)
     dataset_path = "dataSet" + (str)(nr_of_dataset) + "/"
