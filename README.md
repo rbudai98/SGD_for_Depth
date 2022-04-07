@@ -14,3 +14,12 @@ As structure contains multiple ```dataSet<nr>``` directories that include:
 * ```checkpoints```        contains the last trained network's data and loads them at further training
 * ```CNN_train.py```       tensorflow model definition and training
   
+## To Do:
+- [x] create dataset generator
+- [x] create dataset
+- [x] create training datasets
+- [x] tensorflow training model 
+- [x] tensorflow training
+- [ ] load model in C++
+- [ ] pipline with camera sdk
+- [ ] optimitaions
