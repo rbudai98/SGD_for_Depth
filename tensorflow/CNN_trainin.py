@@ -44,10 +44,10 @@ model.summary()
 #loss_fn = keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 loss_fn = tf.losses.mae
 # Restore the weights
-#model.load_weights('./checkpoints/my_checkpoint-20220401-094638')
+model.load_weights('./checkpoints/my_checkpoint-20220405-100502')
 model.compile(
     loss=keras.losses.BinaryCrossentropy(),
-    optimizer=keras.optimizers.Adam(learning_rate=0.001),
+    optimizer=keras.optimizers.Adam(learning_rate=0.0001),
     metrics=["accuracy"],
 )
 # saving the model during runtime and after finishing
@@ -76,7 +76,7 @@ for i in range(2, 6):
     dataSetX = (dataSetX.reshape(nr_of_imgs, 300) /
                 (np.max(dataSetX))).astype("float32")
     dataSetY = dataSetY.astype("float32")
-    #(dataSetX, dataSetY) = randomize(dataSetX, dataSetY)
+    (dataSetX, dataSetY) = randomize(dataSetX, dataSetY)
 
 
 

@@ -44,7 +44,7 @@ model.summary()
 #loss_fn = keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 loss_fn = tf.losses.mae
 # Restore the weights
-model.load_weights('./checkpoints/my_checkpoint-20220401-094638')
+model.load_weights('./checkpoints/my_checkpoint-20220404-185619')
 model.compile(
     loss=keras.losses.BinaryCrossentropy(),
     metrics=["accuracy"],
@@ -52,8 +52,7 @@ model.compile(
 
 # DATA SET
 
-
-dataset_number = 1
+dataset_number = 2
 dataset_path = "../resources/dataSet" + (str)(dataset_number) + "/"
 
 # reading in from file
@@ -67,9 +66,16 @@ dataSetX = (dataSetX.reshape(nr_of_imgs, 300) /
 dataSetY = dataSetY.astype("float32")
 (dataSetX, dataSetY) = randomize(dataSetX, dataSetY)
 
+nr_of_test=10
+prediction = model.predict(dataSetX[:10])
+print("Prediction       Labels")
+
+for i in range(nr_of_test):
+    print(prediction[i], "      ", dataSetY[i])
 
 
-print("################\nNr of images: ", nr_of_imgs)
+
+
 
 
 # Save the weights
