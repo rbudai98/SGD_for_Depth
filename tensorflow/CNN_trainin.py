@@ -34,8 +34,9 @@ def randomize(x, y):
 
 inputs = keras.Input(shape=(300,))
 inputs.shape
-x = layers.Dense(300, activation="sigmoid")(inputs)
-x2 = layers.Dense(300, activation="sigmoid")(x)
+x = layers.Dense(128, activation="sigmoid")(inputs)
+x1 = layers.Dense(128, activation="sigmoid")(x)
+x2 = layers.Dense(128, activation="sigmoid")(x1)
 outputs = layers.Dense(1, activation="sigmoid")(x2)
 model = keras.Model(inputs=inputs, outputs=outputs, name="fully_connected")
 model.summary()
@@ -44,7 +45,7 @@ model.summary()
 #loss_fn = keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 loss_fn = tf.losses.mae
 # Restore the weights
-model.load_weights('./checkpoints/my_checkpoint-20220405-100502')
+#model.load_weights('./checkpoints/my_checkpoint-20220405-100502')
 model.compile(
     loss=keras.losses.BinaryCrossentropy(),
     optimizer=keras.optimizers.Adam(learning_rate=0.0001),
