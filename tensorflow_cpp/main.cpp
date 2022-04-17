@@ -1,6 +1,12 @@
 #include <iostream>
 #include "cppflow/cppflow.h"
+#include "include/fdeep/fdeep.hpp"
+#include "include"
 
+#include <filesystem>
+#include <exception>
+using namespace stdext;
+namespace fs = std::filesystem;
 
 int main() {
 

@@ -1,3 +1,0 @@
-/home/robi/Workspace_SGD/SGD_for_Depth/tensorflow_cpp/CMakeFiles/rebuild_cache.dir
-/home/robi/Workspace_SGD/SGD_for_Depth/tensorflow_cpp/CMakeFiles/edit_cache.dir
-/home/robi/Workspace_SGD/SGD_for_Depth/tensorflow_cpp/CMakeFiles/example.dir
