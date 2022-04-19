@@ -7,6 +7,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import numpy as np
 import os
 import datetime
+import json
 #from sklearn import utils
 
 
@@ -45,14 +46,29 @@ model.load_weights('./checkpoints/my_checkpoint-20220417-150829')
 
 model.summary()
 
-print(model.get_weights())
+# print(model.get_weights()[0].tolist())
+
+print(model.get_weights()[7])
+
+json_model = []
+
 
 #for layer in model.layers:
     #print(layer.name, layer)
 
+poz = 0
+
 for layer in model.layers[1:]:
-    #print(layer.weights)
-    print(keras.layers.serialize(layer))
-    print(layer.bias.numpy())
-    print("###################################################################")
-  
+    json_model.append({
+        "name": layer.name,
+        "weights": model.get_weights()[poz].tolist(),
+        "bias": model.get_weights()[poz+1].tolist()
+    })
+    poz = poz+2
+
+with open("JSON_Model.json", 'w') as json_file:
+    json.dump(json_model, json_file, 
+                        indent=4,  
+                        separators=(',',': '))
+
+print(json_model)

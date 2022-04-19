@@ -1,15 +1,22 @@
 #include <iostream>
 #include "cppflow/cppflow.h"
-#include "include/fdeep/fdeep.hpp"
-#include "include"
-
-#include <filesystem>
 #include <exception>
-using namespace stdext;
-namespace fs = std::filesystem;
+
+
+struct layer{
+    std::string name;
+    float* weights;
+    float* bias;
+
+};
+
 
 int main() {
 
+
+return 0;
+
+/*
     // Load the model
     cppflow::model model("../tensorflow/saved_model/my_model-20220405-111254");
 
@@ -32,4 +39,6 @@ int main() {
     
     // Show the predicted class
     std::cout << cppflow::arg_max(output, 1) << std::endl;
+
+*/
 }
