@@ -32,12 +32,10 @@
 *.app
 
 
-*.json
 *.raw
 *.jpg
 *.jpeg
-*.json
-*.jsons
+
 depth_to_rgb
 resources/dataSet*
 tensorflow_cpp/lib
