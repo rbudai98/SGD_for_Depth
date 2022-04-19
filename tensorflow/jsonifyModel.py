@@ -68,7 +68,7 @@ for layer in model.layers[1:]:
 
 with open("JSON_Model.json", 'w') as json_file:
     json.dump(json_model, json_file, 
-                        indent=4,  
-                        separators=(',',': '))
+                        indent=0,  
+                        separators=(',',':'))
 
 print(json_model)
