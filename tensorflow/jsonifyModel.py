@@ -71,10 +71,14 @@ for layer in model.layers[1:]:
     array=np.reshape(array,(1,-1)).tolist()
     array2=np.reshape(array2,(1,-1)).tolist()
 
-    for d in array:
-        f1.write(f"{d}\n")
-    f1.close()   
-    for d in array2:
-        f2.write(f"{d}\n")
-    f2.close()
+    # for d in array:
+    #     f1.write(f"{d}\n")
+    # f1.close()   
+    # for d in array2:
+    #     f2.write(f"{d}\n")
+    # f2.close()
+
+    np.savetxt("json_model/layer_"+(str)(poz)+"_weights.txt", array, delimiter=" ")
+    np.savetxt("json_model/layer_"+(str)(poz)+"_bias.txt", array2, delimiter=" ")
+
     poz = poz+1

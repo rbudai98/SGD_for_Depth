@@ -10,53 +10,86 @@
 #include <fstream>
 #include <sstream>
 #include <stdio.h>
-#include <jsoncpp/json/json.h>
-#include <jsoncpp/json/value.h>
 #include <string>
 
 #include <vector>
 #include "struct_mapping/struct_mapping.h"
 
-#include <nlohmann/json.hpp>
-
-
-struct Layer{
+struct Layer
+{
     std::string name;
-    std::vector<float> weights;
-    std::vector<float> bias;
-
+    std::vector<double> weights;
+    std::vector<double> bias;
 };
 
+std::string getFileNameWeights(std::string fileName)
+{
+    std::string firstPart = "../../tensorflow/json_model/";
+    std::string lastPartWeights = "_weights.txt";
 
-std::string readFileIntoString(const std::string& path) {
-    std::ifstream input_file(path);
-    if (!input_file.is_open()) {
-        std::cerr << "Could not open the file - '"
-             << path << "'" << std::endl;
-        exit(EXIT_FAILURE);
-    }
-    return std::string((std::istreambuf_iterator<char>(input_file)), std::istreambuf_iterator<char>());
+    return(firstPart.append(fileName.append(lastPartWeights)));
+
+}
+std::string getFileNameBias(std::string fileName)
+{
+    std::string firstPart = "../../tensorflow/json_model/";
+    std::string lastPartBias = "_bias.txt";
+
+   return(firstPart.append(fileName.append(lastPartBias)));
 }
 
-int main() {
+void readInLayer(std::vector<Layer> network, std::string fileName)
+{
+    std::string fileNameWeights = getFileNameWeights(fileName);
+    std::string fileNameBias = getFileNameBias(fileName);
 
-    struct_mapping::reg(&Layer::name, "name");
-    struct_mapping::reg(&Layer::weights, "weights");
-    struct_mapping::reg(&Layer::bias, "bias");
+
+    std::cout << "File name weights: " << fileNameWeights << std::endl
+              << "File name bias: " << fileNameBias << std::endl;
+
+    std::ifstream myFileWeights; // creates stream myFile
+    std::ifstream myFileBias;    // creates stream myFile
+
+    myFileWeights.open(fileNameWeights);                   // opens .txt file
+    myFileBias.open(fileNameBias);                         // opens .txt file
+    if (!myFileWeights.is_open() || !myFileBias.is_open()) // check file is open, quit if not
+    {
+        std::cerr << "failed to open file\n";
+        return;
+    }
+
+    std::vector<double> weights; // vector to store the numerical values in
+    std::vector<double> bias;    // vector to store the numerical values in
+
+    double number = 0;
+    while (myFileWeights >> number)
+    {
+        weights.push_back(number);
+    }
+    while (myFileBias >> number)
+    {
+        bias.push_back(number);
+    }
 
     Layer layer;
+    layer.name=fileName;
+    layer.weights=weights;
+    layer.bias=bias;
 
-    // std::string strJson = readFileIntoString("../../tensorflow/JSON_Model.json");
-    std::ifstream file("../../tensorflow/JSON_Model.json");
+    network.push_back(layer);
 
-    Json::Value root;   
-    Json::Reader reader;
-    reader.parse(file,root);
-    
+    std::cout << "##################\nWeights: " << weights.size() << "\nBiases: " << bias.size() << std::endl;
+}
 
+int main()
+{
+    std::vector<Layer> Network;
+    readInLayer(Network, "layer_0");
+    readInLayer(Network, "layer_1");
+    readInLayer(Network, "layer_2");
+    readInLayer(Network, "layer_3");
 
     return 0;
-
     /*
         // Load the model
         cppflow::model model("../tensorflow/saved_model/my_model-20220405-111254");
@@ -77,7 +110,7 @@ int main() {
 
         // Run
         auto output = model(input2);
-        
+
         // Show the predicted class
         std::cout << cppflow::arg_max(output, 1) << std::endl;
 
