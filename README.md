@@ -20,6 +20,7 @@ As structure contains multiple ```dataSet<nr>``` directories that include:
 - [x] create training datasets
 - [x] tensorflow training model 
 - [x] tensorflow training
-- [ ] load model in C++
+- [x] load model in C++
+- [ ] cuda API architecture design and implementation
 - [ ] pipline with camera sdk
 - [ ] optimitaions

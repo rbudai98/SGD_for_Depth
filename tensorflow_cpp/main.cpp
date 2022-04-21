@@ -78,7 +78,7 @@ void readInLayer(std::vector<Layer> network, std::string fileName)
 
     network.push_back(layer);
 
-    std::cout << "##################\nWeights: " << weights.size() << "\nBiases: " << bias.size() << std::endl;
+    std::cout << "########\nWeights: " << weights.size() << "\nBiases: " << bias.size() << std::endl;
 }
 
 int main()
