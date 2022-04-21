@@ -1,6 +1,5 @@
 import sys
 import tensorflow as tf
-import tensorflow_datasets as tfds
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -43,32 +42,39 @@ model = keras.Model(inputs=inputs, outputs=outputs, name="fully_connected")
 
 # Restore the weights
 model.load_weights('./checkpoints/my_checkpoint-20220417-150829')
-
 model.summary()
-
-# print(model.get_weights()[0].tolist())
-
-print(model.get_weights()[7])
-
 json_model = []
 
 
-#for layer in model.layers:
-    #print(layer.name, layer)
+# for layer in model.layers[1:]:
+#     json_model.append({
+#         "name": layer.name,
+#         "weights": model.get_weights()[poz].tolist(),
+#         "bias": model.get_weights()[poz+1].tolist()
+#     })
+#     poz = poz+2
 
+# with open("JSON_Model.json", 'w') as json_file:
+#     json.dump(json_model, json_file, 
+#                         indent=0,  
+#                         separators=(',',':'))
+
+# print(json_model)
 poz = 0
-
 for layer in model.layers[1:]:
-    json_model.append({
-        "name": layer.name,
-        "weights": model.get_weights()[poz].tolist(),
-        "bias": model.get_weights()[poz+1].tolist()
-    })
-    poz = poz+2
+        
+    f1 = open("json_model/layer_"+(str)(poz)+"_weights.txt", "w")
+    f2 = open("json_model/layer_"+(str)(poz)+"_bias.txt", "w")
+    array = model.get_weights()[poz*2]
+    array2 = model.get_weights()[poz*2+1]
+    
+    array=np.reshape(array,(1,-1)).tolist()
+    array2=np.reshape(array2,(1,-1)).tolist()
 
-with open("JSON_Model.json", 'w') as json_file:
-    json.dump(json_model, json_file, 
-                        indent=0,  
-                        separators=(',',':'))
-
-print(json_model)
+    for d in array:
+        f1.write(f"{d}\n")
+    f1.close()   
+    for d in array2:
+        f2.write(f"{d}\n")
+    f2.close()
+    poz = poz+1
