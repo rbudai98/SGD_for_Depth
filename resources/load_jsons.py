@@ -22,13 +22,13 @@ import matplotlib.pyplot as plt
 
 dataSetArraysOk = np.array([])
 
-sizees = [640, 320, 160, 80, 40, 20]
+sizees = [640, 320, 160, 80, 40]
 
 nrOfCroppedFileOk = 0
 nrOfCroppedFileNotOk = 0
 outputArray = np.array([])
 
-for i in range (1,2):
+for i in range (2,3):
     nr_of_dataset = i
     print("DataSet: ", nr_of_dataset)
     dataset_path = "dataSet" + (str)(nr_of_dataset) + "/"
@@ -79,10 +79,8 @@ for i in range (1,2):
                 size = (160, 120)
             elif (abs(x2-x1) > 40 or abs(y2-y1)>30):
                 size = (80, 60)
-            elif (abs(x2-x1) > 20 or abs(y2-y1)>15):
-                size = (40, 30)
             else:
-                size = (20, 15)
+                size = (40, 30)
             print(k, ". ", x2-x1, y2-y1, "size=", size)
 
             # IR frame
@@ -101,7 +99,9 @@ for i in range (1,2):
             # converting the frame into 8 bit array (255/4055) = alpha, hence deft = src*alpha
             
             #depthFrame = cv2.convertScaleAbs(depthFrame, alpha=0.063)
-            depthFrame = (depthFrame/4).astype('uint8')
+            
+            # print((depthFrame.dtype))
+            # depthFrame = (depthFrame/4).astype('uint8')
             #depthFrame = depthFrame.astype(np.uint8)
             
             
@@ -127,9 +127,9 @@ for i in range (1,2):
                         (y_cord+size[1])), x_cord:(x_cord+size[0])]
                     # resizing to have the same size
                     irCrop = cv2.resize(
-                        irCropOriginal, (20, 15), interpolation=cv2.INTER_LINEAR)
+                        irCropOriginal, (40, 30), interpolation=cv2.INTER_LINEAR)
                     depthCrop = cv2.resize(
-                        depthCropOriginal, (20, 15), interpolation=cv2.INTER_LINEAR)
+                        depthCropOriginal, (40, 30), interpolation=cv2.INTER_LINEAR)
 
                     # calculate the next region to check if it includes the right boundbox
                     x_cord_next = (int)((i+1)*(size[0]/2))
@@ -152,7 +152,7 @@ for i in range (1,2):
                             outputArray = np.append(outputArray, 1)
 
                             depthCrop = np.reshape(np.asarray(
-                                depthCrop), (1, 300)).flatten()
+                                depthCrop), (1, 1200)).flatten()
                             dataSetArraysOk = np.append(dataSetArraysOk, depthCrop)
 
                             nrOfCroppedFileOk = nrOfCroppedFileOk + 1
@@ -168,7 +168,7 @@ for i in range (1,2):
 
                         outputArray = np.append(outputArray, 0)
                         depthCrop = np.reshape(np.asarray(
-                            depthCrop), (1, 300)).flatten()
+                            depthCrop), (1, 1200)).flatten()
                         dataSetArraysOk = np.append(dataSetArraysOk, depthCrop)
 
                         nrOfCroppedFileNotOk = nrOfCroppedFileNotOk + 1
@@ -177,8 +177,11 @@ for i in range (1,2):
     np.save(dataset_path + "dataSetArray", dataSetArraysOk)
     np.save(dataset_path + "dataSetArraysOutput", outputArray)
 
+    np.savetxt("inputData.txt", dataSetArraysOk)
+
+
     myDataSet = tf.data.Dataset.from_tensor_slices(
-        np.reshape(dataSetArraysOk, (-1, 300)))
+        np.reshape(dataSetArraysOk, (-1, 1200)))
     myDataSetLabel = tf.data.Dataset.from_tensor_slices(outputArray)
 
     print("Dataset cardinality: ", myDataSet.cardinality().numpy())

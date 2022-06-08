@@ -10,8 +10,8 @@ import json
 #from sklearn import utils
 
 
-img_height = 20
-img_width = 15
+img_height = 40
+img_width = 30
 
 
 def shuffle(a, b):
@@ -32,7 +32,7 @@ def randomize(x, y):
 # MODEL
 
 
-inputs = keras.Input(shape=(300,))
+inputs = keras.Input(shape=(1200,))
 inputs.shape
 x = layers.Dense(128, activation="sigmoid")(inputs)
 x1 = layers.Dense(128, activation="sigmoid")(x)
@@ -41,7 +41,7 @@ outputs = layers.Dense(1, activation="sigmoid")(x2)
 model = keras.Model(inputs=inputs, outputs=outputs, name="fully_connected")
 
 # Restore the weights
-model.load_weights('./checkpoints/my_checkpoint-20220417-150829')
+model.load_weights('./checkpoints/my_checkpoint-20220601-201948')
 model.summary()
 json_model = []
 

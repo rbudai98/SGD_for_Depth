@@ -1,0 +1,201 @@
+[33mcommit 2e66f3accb9a4726ea6f4d1613f8837977f4e970[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Tue Apr 19 16:10:05 2022 +0300
+
+    Json format modified
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit ed4130ec47be024dca4cc84fb80fb76d58122162[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Tue Apr 19 13:56:41 2022 +0300
+
+    gitignore removed json files
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit c69d10bd5a5dd7d8388e5cf931e0b0b5a54f56f0[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Tue Apr 19 10:34:34 2022 +0300
+
+    Added python model saving to json
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 5e4de568ed9258055d3266f43b8f5cc7dff89784[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Sun Apr 17 22:49:10 2022 +0300
+
+    added jsonify
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit f691df8ef1d7f654318faf5610c14b62bdc7f692[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Sun Apr 17 15:04:21 2022 +0300
+
+    model update
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 0e1397f67ebb0c58bb6e66d4ec387203b3f9d1c7[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Sun Apr 17 08:49:42 2022 +0300
+
+    Restructure tensorflow_cpp project
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 959aa2fec2970ad69abe7c67a82b0d47415cbd3b[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Sun Apr 17 02:43:07 2022 +0300
+
+    Added cppflow
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 89aa4a55c2310f0d05076c149c745c0c038f14e4[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Thu Apr 7 08:41:12 2022 +0300
+
+    updated readme
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit eb96d4869218e3aca2ef97fefbeb4092fafff6e6[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Thu Apr 7 08:32:48 2022 +0300
+
+    corrcted permutation function and obtaining trained model over 0.96 accuracy
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 19d3afa05f391cc9d9b2885215fd8f4de7985999[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Mon Apr 4 19:46:12 2022 +0300
+
+    Added evaluation python script plus trained model
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 84efdc4da1636a4659681912953117696dfe7701[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Wed Mar 30 11:00:14 2022 +0300
+
+    Added fully connected lyer from skratch
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 2a20bb915666c903b04ac38959b398cd11bb34a4[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Fri Mar 25 14:58:04 2022 +0200
+
+    dataSet format corrected, training on multipple dataSets
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit c62c9114cfada400069ad28f8461cd74201f16a3[m
+Author: rbudai98 <89078591+rbudai98@users.noreply.github.com>
+Date:   Thu Mar 24 11:20:39 2022 +0200
+
+    Update README.md
+
+[33mcommit 0935bf8939b93fa4f4f3ac719704900b9d044600[m
+Author: rbudai98 <89078591+rbudai98@users.noreply.github.com>
+Date:   Thu Mar 24 11:17:38 2022 +0200
+
+    Update README.md
+
+[33mcommit 4fa1d66fb1b4a5ab75c6d7b61aae702f899ccf3b[m
+Author: rbudai98 <89078591+rbudai98@users.noreply.github.com>
+Date:   Thu Mar 24 11:17:18 2022 +0200
+
+    Update README.md
+
+[33mcommit c7afeff9a9451f709e0a4190504e1db6ba0e088f[m
+Author: rbudai98 <89078591+rbudai98@users.noreply.github.com>
+Date:   Thu Mar 24 11:16:35 2022 +0200
+
+    Update README.md
+
+[33mcommit c98a986aa7e3fc01919926b2dad2bc154a03c61f[m
+Author: rbudai98 <89078591+rbudai98@users.noreply.github.com>
+Date:   Thu Mar 24 11:05:32 2022 +0200
+
+    Update README.md
+
+[33mcommit 589e4d132dc28b3f303ded2a436d4b1ba4088059[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Wed Mar 23 19:03:05 2022 +0200
+
+    Added new trained models, need corrction. Tensorflow with checkpoints
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 2c6bf1d5320dac3182babb64c4f7f891a1ec4bf3[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Tue Mar 22 21:34:45 2022 +0200
+
+    added dataset preparing code and checkpoint for tensorflow model
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit e71bf2052b8be48bf4d4c44f9fcd9e55ada7ed38[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Fri Feb 18 08:48:04 2022 +0200
+
+    Final resource parser and identifier
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 1234c512f6c60c50c8307c09bbf42c2dbfd6f5b7[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Tue Feb 15 21:07:56 2022 +0200
+
+    Rewrite Image class
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit d08205757e95ea265ec7297f5518d6d8f2d247d9[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Tue Feb 15 19:00:15 2022 +0200
+
+    Resources added to gitignore
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit fd7c6bbe70e3b4aac8139449b3da8929433a6bbf[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Tue Feb 15 18:59:21 2022 +0200
+
+    Header updated
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 4b21cd9e6b510beb0643d523ae67af77ed56f87b[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Tue Feb 15 18:56:35 2022 +0200
+
+    Added epoc learning fir Images
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 9ef70739cb1abd6b7c02fe133d249f3535ef2855[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Tue Feb 15 17:06:38 2022 +0200
+
+    SGB -initial version
+    
+    Signed-off-by: rbudai98 <robert.budai@analog.com>
+
+[33mcommit 6dfaa81d211300a5ea0b0513f80778b939b8f788[m
+Author: rbudai98 <robert.budai@analog.com>
+Date:   Sat Jan 8 03:59:31 2022 +0200
+
+    Neuron and Layer
+
+[33mcommit d89716c5986697e14076ffc80005cede6b70c0a2[m
+Author: rbudai98 <89078591+rbudai98@users.noreply.github.com>
+Date:   Sat Jan 8 03:01:08 2022 +0200
+
+    Initial commit

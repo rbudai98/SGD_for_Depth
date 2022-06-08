@@ -10,8 +10,8 @@ import datetime
 #from sklearn import utils
 
 
-img_height = 20
-img_width = 15
+img_height = 40
+img_width = 30
 
 
 def shuffle(a, b):
@@ -32,7 +32,7 @@ def randomize(x, y):
 # MODEL
 
 
-inputs = keras.Input(shape=(300,))
+inputs = keras.Input(shape=(1200,))
 inputs.shape
 x = layers.Dense(128, activation="sigmoid")(inputs)
 x1 = layers.Dense(128, activation="sigmoid")(x)
@@ -73,8 +73,8 @@ for i in range(2, 6):
     dataSetY = np.load(dataset_path + "dataSetArraysOutput.npy")
 
     print("Size: ", dataSetX.size, ", max value= ", np.max(dataSetX), "\n\n")
-    nr_of_imgs = (int)(dataSetX.size/300)
-    dataSetX = (dataSetX.reshape(nr_of_imgs, 300) /
+    nr_of_imgs = (int)(dataSetX.size/1200)
+    dataSetX = (dataSetX.reshape(nr_of_imgs, 1200) /
                 (np.max(dataSetX))).astype("float32")
     dataSetY = dataSetY.astype("float32")
     (dataSetX, dataSetY) = randomize(dataSetX, dataSetY)
