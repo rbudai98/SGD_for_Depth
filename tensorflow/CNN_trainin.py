@@ -75,8 +75,8 @@ for i in range(2, 6):
     print("Size: ", dataSetX.size, ", max value= ", np.max(dataSetX), "\n\n")
     nr_of_imgs = (int)(dataSetX.size/1200)
     dataSetX = (dataSetX.reshape(nr_of_imgs, 1200) /
-                (np.max(dataSetX))).astype("float32")
-    dataSetY = dataSetY.astype("float32")
+                (np.max(dataSetX))).astype("float64")
+    dataSetY = dataSetY.astype("float64")
     (dataSetX, dataSetY) = randomize(dataSetX, dataSetY)
 
 

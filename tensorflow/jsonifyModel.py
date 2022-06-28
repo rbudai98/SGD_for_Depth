@@ -41,7 +41,7 @@ outputs = layers.Dense(1, activation="sigmoid")(x2)
 model = keras.Model(inputs=inputs, outputs=outputs, name="fully_connected")
 
 # Restore the weights
-model.load_weights('./checkpoints/my_checkpoint-20220601-201948')
+model.load_weights('/home/xavier/SGD_for_Depth/tensorflow/checkpoints/my_checkpoint-20220607-111315')
 model.summary()
 json_model = []
 
@@ -63,13 +63,13 @@ json_model = []
 poz = 0
 for layer in model.layers[1:]:
         
-    f1 = open("json_model/layer_"+(str)(poz)+"_weights.txt", "w")
-    f2 = open("json_model/layer_"+(str)(poz)+"_bias.txt", "w")
+    f1 = open("/home/xavier/SGD_for_Depth/tensorflow/json_model/layer_"+(str)(poz)+"_weights.txt", "w")
+    f2 = open("/home/xavier/SGD_for_Depth/tensorflow/json_model/layer_"+(str)(poz)+"_bias.txt", "w")
     array = model.get_weights()[poz*2]
     array2 = model.get_weights()[poz*2+1]
     
-    array=np.reshape(array,(1,-1)).tolist()
-    array2=np.reshape(array2,(1,-1)).tolist()
+    array=np.reshape(array,(-1,1)).tolist()
+    array2=np.reshape(array2,(-1,1)).tolist()
 
     # for d in array:
     #     f1.write(f"{d}\n")
@@ -78,7 +78,10 @@ for layer in model.layers[1:]:
     #     f2.write(f"{d}\n")
     # f2.close()
 
-    np.savetxt("json_model/layer_"+(str)(poz)+"_weights.txt", array, delimiter=" ")
-    np.savetxt("json_model/layer_"+(str)(poz)+"_bias.txt", array2, delimiter=" ")
+    # print(array)
+
+    np.savetxt("/home/xavier/SGD_for_Depth/tensorflow/json_model/layer_"+(str)(poz)+"_weights.txt", array, delimiter=" ")
+    np.savetxt("/home/xavier/SGD_for_Depth/tensorflow/json_model/layer_"+(str)(poz)+"_bias.txt", array2, delimiter=" ")
+    print("Done")
 
     poz = poz+1
